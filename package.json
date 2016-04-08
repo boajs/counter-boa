@@ -18,7 +18,9 @@
   "bugs": {
     "url": "https://github.com/bouzuya/counter-boa/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "b-o-a": "^0.8.0"
+  },
   "devDependencies": {
     "ava": "0.13.0",
     "parallelshell": "2.0.0",
