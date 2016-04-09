@@ -44,12 +44,13 @@
     "url": "git+https://github.com/bouzuya/counter-boa.git"
   },
   "scripts": {
-    "build": "tsc && webpack && npm run build-less && cp index.html dist/",
+    "build": "tsc && webpack && npm run build-less && npm run build-html",
     "build-less": "lessc src/styles/index.less dist/styles/index.css",
+    "build-html": "([ -d dist ] || mkdir -p dist) && cp index.html dist",
     "clean": "rm -rf .tmp/ dist/",
     "prepublish": "typings install && npm run clean && npm run build",
     "test": "ava",
-    "watch": "parallelshell 'tsc --watch' 'ava --watch' 'npm run watch-less' 'webpack-dev-server --config webpack.dev.config.js'",
-     "watch-less": "watch --ignoreUnreadable --wait 5 'npm run build-less' src/styles/"
+    "watch": "npm run clean && npm run build-html && parallelshell 'tsc --watch' 'ava --watch' 'npm run watch-less' 'webpack-dev-server --config webpack.dev.config.js'",
+    "watch-less": "watch --ignoreUnreadable --wait 5 'npm run build-less' src/styles/"
   }
 }

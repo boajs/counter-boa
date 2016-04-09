@@ -15,7 +15,8 @@ module.exports = {
     'source-map'
   ],
   devServer: {
-    port: port
+    port: port,
+    contentBase: './dist/'
   },
   module: {
     preLoaders: [
@@ -23,7 +24,8 @@ module.exports = {
     ]
   },
   output: {
-    path: __dirname,
+    path: path.join(__dirname, 'dist/scripts/'),
+    publicPath: '/scripts/',
     filename: 'bundle.js'
   },
   plugins: [
