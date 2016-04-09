@@ -13,6 +13,7 @@
   "files": [
     "./src/client.ts",
     "./test/index.ts",
+    "./test/types/counter.ts",
     "./typings/main.d.ts",
     "./node_modules/typescript/lib/lib.es6.d.ts"
   ]
