@@ -14,7 +14,7 @@ import { initByState } from '../../src/types/counter/init-by-state';
 import { init as initState } from '../../src/types/state/init';
 
 test(t => {
-  const counter1 = init(0);
+  const counter1 = init();
   t.ok(count(counter1) === 0);
   t.ok(count(increment(counter1)) === 1);
 
