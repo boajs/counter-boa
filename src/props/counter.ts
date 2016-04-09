@@ -1,8 +1,8 @@
 import { A, O } from 'b-o-a';
 
-import { Counter } from '../types/counter';
 import { filter as increment$ } from '../actions/props/counter/increment';
-import { increment } from '../types/counter/increment';
+
+import { Counter } from '../types/counter';
 
 export type PropHandler<T> = (action$: O<A<any>>, state: T) => O<T>;
 
