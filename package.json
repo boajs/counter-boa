@@ -50,7 +50,7 @@
     "clean": "rm -rf .tmp/ dist/",
     "prepublish": "typings install && npm run clean && npm run build",
     "test": "ava",
-    "watch": "npm run clean && npm run build-html && parallelshell 'tsc --watch' 'ava --watch' 'npm run watch-less' 'webpack-dev-server --config webpack.dev.config.js'",
+    "watch": "npm run clean && tsc && npm run build-html && parallelshell 'tsc --watch' 'ava --watch' 'npm run watch-less' 'webpack-dev-server --config webpack.dev.config.js'",
     "watch-less": "watch --ignoreUnreadable --wait 5 'npm run build-less' src/styles/"
   }
 }
