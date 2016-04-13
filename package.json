@@ -45,7 +45,7 @@
   },
   "scripts": {
     "build": "tsc && webpack && npm run build-less && npm run build-html",
-    "build-less": "lessc src/styles/index.less dist/styles/index.css",
+    "build-less": "lessc src/styles/index.less dist/index.css",
     "build-html": "([ -d dist ] || mkdir -p dist) && cp index.html dist",
     "clean": "rm -rf .tmp/ dist/",
     "prepublish": "typings install && npm run clean && npm run build",
